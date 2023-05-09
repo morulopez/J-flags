@@ -1,0 +1,7 @@
+# .gitignore
+
+# Ignore node_modules folder
+node_modules/
+
+# Ignore the distribution folder (if you choose not to include it in version control)
+dist/

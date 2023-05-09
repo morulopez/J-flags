@@ -1,0 +1,142 @@
+/*
+    General Flag Style
+*/
+
+.flag{
+    color:#fff;
+    padding:20px;
+    right:10px;
+    top:10px;
+    position:fixed;
+    text-align:center;
+    min-width:200px;
+    border-radius:4px;
+    opacity:0;
+}
+
+/*
+-----------------------------------------------------------------------------------------------
+    End General Flag Style
+-----------------------------------------------------------------------------------------------
+*/
+
+/*
+    Background For Each class
+*/
+.info{
+    background-color:#17a2b8;
+}
+
+.success{
+    background-color:#4BB543;
+}
+
+.warning{
+    background-color:#ffc107;
+}
+
+.error{
+    background-color:#dc3545;
+}
+
+/*
+-----------------------------------------------------------------------------------------------
+    End Background For Each class
+-----------------------------------------------------------------------------------------------
+*/
+
+/*
+    Animation class
+*/
+.show{
+    opacity:1;
+}
+
+.fadeIn{
+    animation: fadeInA .5s ease;
+    animation-fill-mode: forwards;
+}
+
+.appears{
+    animation: appearsA .5s ease;
+    animation-fill-mode: forwards;
+}
+.topToDown{
+    top:-100px;
+    animation: topToDownA .5s  ease-in-out forwards;
+    animation-fill-mode: forwards;
+}
+
+.rightToLeft{
+    right:-100px;
+    animation: rightToLeftA .5s  ease-in-out forwards;
+    animation-fill-mode: forwards;
+}
+
+.glow{
+    animation: glowA 0.5s ease;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInA {
+	0% {
+		opacity:0;
+	}
+	100% {
+		opacity:1;
+	}
+}
+
+@keyframes appearsA {
+	0% {
+		transform: scale(0%);
+        opacity:0;
+	}
+	100% {
+		transform: scale(100%);
+        opacity:1;
+	}
+}
+
+@keyframes topToDownA {
+    0% {
+      opacity:0;
+      top:-100px;
+    }
+    100%  {
+      top:10px;
+      opacity:1;
+    }
+}
+
+@keyframes rightToLeftA {
+    0% {
+      opacity:0;
+      right:-100px;
+    }
+    100%  {
+      right:10px;
+      opacity:1;
+    }
+}
+
+@keyframes glowA {
+    0% {
+      opacity: 0;
+      filter: brightness(5) saturate(5);
+      transform: scale(0.2, 0.2); 
+    }
+    100% {
+      filter: brightness(1) saturate(1);
+      transform: scale(1, 1);
+      opacity: 1;
+    }
+}
+
+/*
+-----------------------------------------------------------------------------------------------
+    End Animation class
+-----------------------------------------------------------------------------------------------
+*/
+
+
