@@ -1,1 +1,1 @@
-export {default as Jflag} from './Jflag';
+export {default as JFlag} from './Jflag';
