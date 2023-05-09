@@ -15,10 +15,10 @@ Install J-flags with npm
 ## Usage/Examples
 
 ```javascript
-import { Jflag } from 'j-flags';
+import { JFlag } from 'j-flags';
 
 function App() {
-  return <Jflag 
+  return <JFlag 
             text="Hello this is a message"
             sound={true}
             typeF="info"
@@ -37,7 +37,7 @@ function MyComponent(){
 // He you have to raplace text for component or use both.
 
 function App() {
-  return <Jflag 
+  return <JFlag 
             component={<MyComponent/>}
             sound={true}
             typeF="info"
@@ -54,59 +54,59 @@ function App() {
 
 # J-Flags
 
-Each Jflag component has a series of props, some of which are mandatory and some are not.
+Each JFlag component has a series of props, some of which are mandatory and some are not.
 
 ## Mandatory Props
 
-Every component must have the `typeF` prop, as this prop tells our component the type of Jflag it will load. It only accepts strings and the available options in this first version are ['warning', 'info', 'success', 'error'].
+Every component must have the `typeF` prop, as this prop tells our component the type of JFlag it will load. It only accepts strings and the available options in this first version are ['warning', 'info', 'success', 'error'].
 
 Example:
 ```jsx
-<Jflag typeF="warning" />
+<JFlag typeF="warning" />
 ```
 Also, each component must include one or both of the following mandatory props:
 
 text which only accepts string parameters.
 For example, you can insert 
 ```jsx 
-<Jflag text="This is a message"/>
+<JFlag text="This is a message"/>
 ```
 , but not 
 ```jsx
-<Jflag text={true}/>
+<JFlag text={true}/>
 ```
 or 
 ```jsx
-<Jflag text={<Component/>}/> 
+<JFlag text={<Component/>}/> 
 ```
 as this prop is used to insert a text string into our component.
 
 component prop which accepts only React components as its value.
 Example:
 ```jsx
-<Jflag component={<MyComponent/>}/>
+<JFlag component={<MyComponent/>}/>
 ```
 Using 
 ```jsx
-<Jflag component="This is a text"/> 
+<JFlag component="This is a text"/> 
 ```
 would be incorrect and cause an error.
 
 Optional Props
 sound prop allows a sound to be played when our component appears 
 ```jsx
-<Jflag sound={true} />
+<JFlag sound={true} />
 ```
 This prop is not mandatory but if we want to add it, it only accepts boolean values and defaults to false if not specified.
 
 animation prop adds a small animation to our component when it appears. This prop is not mandatory but if added, it only accepts string values. The options available in this first version are ['fadeIn', 'rightToLeft', 'topToDown', 'appears', 'glow', 'show'].
 Example:
 ```jsx
-<Jflag animation="fadeIn" />
+<JFlag animation="fadeIn" />
 ```
 
 Styling
-We can pass our own styles via props. Each <Jflag/> component comes with predefined styles:
+We can pass our own styles via props. Each <JFlag/> component comes with predefined styles:
 ```jsx
 .flag{
     color:#fff;
@@ -123,7 +123,7 @@ We can pass our own styles via props. Each <Jflag/> component comes with predefi
 Depending on the typeF we choose, it will have one background color or another. 
 For example
 ```jsx
-<Jflag typeF="success" /> 
+<JFlag typeF="success" /> 
 ```
 would have a background:
 ```jsx
@@ -133,7 +133,7 @@ would have a background:
 ```
 We can replace this with our own inline styles. For this, we use the customStyles prop and the value would be as follows:
 ```jsx
-<Jflag typeF="success" customStyles={{ 'fontSize': '24px', 'backgroundColor': 'blue' }}/>
+<JFlag typeF="success" customStyles={{ 'fontSize': '24px', 'backgroundColor': 'blue' }}/>
 ```
 In this way, we would be overwriting the background #4BB543 with our own and we would be giving a size of 24px to the font.
 
