@@ -8,9 +8,7 @@ import "./flag.css";
 const JFlag = (props:FlgasProps)=>{
     checkReactElement(props);
     const {text,typeF,sound,animation,component,customStyles} = props;
-    const {audioRef,audio,showSound,showAnimation,checkAudio,setAnimation} = useJflagHook();
-    setAnimation(animation);
-    checkAudio(sound,typeF);
+    const { audioRef, audio, showSound, showAnimation } = useJflagHook(typeF,sound, animation);
     return (
         <>
             <div className={`flag ${typeF} ${showAnimation}`} style={customStyles}>
