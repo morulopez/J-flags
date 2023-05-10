@@ -30,7 +30,6 @@ const JFlag = (props:FlgasProps)=>{
             setShowSound(true);
         }
     }, [typeF, sound]);
-
     useEffect(() => {
         animation ? setShowAnimation(animation) : setShowAnimation("show");
     }, [animation]);
