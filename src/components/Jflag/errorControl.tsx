@@ -1,4 +1,3 @@
-import React from 'react';
 import { isElement } from 'react-is';
 import { FlgasProps,typeF as typeFInterface,animationsF} from "./interface";
 

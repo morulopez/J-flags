@@ -11,7 +11,6 @@ import warning from "./assets/warning-s.mp3";
 import "./flag.css";
 
 const JFlag = (props:FlgasProps)=>{
-    checkReactElement(props);
     const {text,typeF,sound,animation,component,customStyles} = props;
     const objAudio: { [key in typeF]: string } = {
         warning,
@@ -30,6 +29,7 @@ const JFlag = (props:FlgasProps)=>{
             setShowSound(true);
         }
     }, [typeF, sound]);
+
     useEffect(() => {
         animation ? setShowAnimation(animation) : setShowAnimation("show");
     }, [animation]);
