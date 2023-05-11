@@ -1,6 +1,6 @@
 {
   "name": "j-flags",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "components flags library for react",
   "scripts": {
     "rollup": "rollup -c",
