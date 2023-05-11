@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import JFlag from '../components/Jflag';
+import { JFlag } from '../components';
 import React from 'react';
 import { useState } from "react";
 

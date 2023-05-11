@@ -1,7 +1,7 @@
 import { isElement } from 'react-is';
-import { FlgasProps,typeF as typeFInterface,animationsF} from "./interface";
+import { FlagsProps,typeF as typeFInterface,animationsF} from "./interface";
 
-export function checkReactElement(props:FlgasProps) {
+export function checkReactElement(props:FlagsProps) {
     const {text,typeF,sound,animation,component,customStyles} = props;
     const VALID_TYPES: typeFInterface[] = ['warning', 'info', 'success', 'error'];
     const VALID_ANIMATION: animationsF[] = ['fadeIn','rightToLeft','topToDown','appears','glow','show'];
