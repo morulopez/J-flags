@@ -23,10 +23,14 @@ type Story = StoryObj<typeof JFlag>;
  */
 
 function TestComponent(){
+  const styles = {
+    fontSize:'22px',
+    color:'#fff',
+    textTransform:'capitalize'
+  } 
   return(
     <>
-      <h1>Hello I Am A Component</h1>
-      <button>Press Button</button>
+      <span style={styles}>message sent successfully</span>
     </>
   )
 }
@@ -41,12 +45,10 @@ function miComponenent(){
     <button onClick={showFlag}>Show/Hidden Flag</button>
     {
       show ? <JFlag 
-              text='holaaaa'
               component={<TestComponent/>}
               typeF="success" 
               sound={true}
-              animation="topToDown"
-              customStyles={{ 'fontSize': '24px', 'backgroundColor': 'blue' }}
+              animation="rightToLeft"
             /> : ''
     }
     </>
